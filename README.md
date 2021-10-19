@@ -3,6 +3,8 @@
 
 Projeto: vamos desenvolver um crachá/cartão virtual de eventos que será utilizado no DoWhile
 
+![Imagem do crachá no figma](https://github.com/Jessica-Niide/nlw_heat/blob/master/figma_example.png?raw=true)
+
 <details>
 <summary>Aula 1</summary>
     
