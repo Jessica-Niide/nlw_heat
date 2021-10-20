@@ -71,6 +71,10 @@ h1 {
     
 ## Revisão dos conceitos da aula 1 e aprofundamento
 
+Como está a página:
+
+![Imagem do crachá](https://github.com/Jessica-Niide/nlw_heat/blob/master/extras/aula2.png?raw=true)
+
 <details>
 <summary>HTML</summary>
 Já vimos que o HTML é uma linguagem que contém marcações, as tags, e que cada tag tem o seu significado, que será traduzido pelo navegador. Ou seja, o html é o responsável pela estrutura das páginas, definindo quem são o título da página, os botões, as estruturas de textos (parágrafos, seções, cabeçalhos de seções), os links, as imagens, etc.
