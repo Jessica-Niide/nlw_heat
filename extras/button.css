@@ -1,0 +1,17 @@
+/* O símbolo * indica um seletor universal, ou seja, o arquivo inteiro recebe essas regras */
+* {
+  background: purple;
+}
+
+/* Os estilos são aplicados em cascata, ou seja, como definimos uma nova cor para o fundo do body ela irá sobrepor a cor de fundo roxa definida anteriormente */
+body {
+  padding: 10pt;
+  background: lightgoldenrodyellow;
+}
+
+button {
+  border: 2px solid black;
+  border-radius: 6px;
+  padding: 5pt;
+  color: white;
+}
