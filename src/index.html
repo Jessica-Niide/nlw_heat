@@ -23,16 +23,17 @@
             <img src="../images/build.svg" alt="Selo Rocketseat" />
           </span>
           <img
+            id="userPhoto"
             src="../images/jessicaniide.jpg"
             alt="Foto pessoal de Jessica Niide"
           />
         </div>
         <h1 id="userName">Jessica Niide</h1>
-        <a id="github" href="https://github.com/">
+        <a id="userGithub" href="https://github.com/">
           <img src="../images/github.svg" alt="Logo do GitHub" />
-          Jessica-Niide
+          <span id="userLogin"> Jessica-Niide </span>
         </a>
-        <p>A passionate student of technology</p>
+        <p id="userBio">A passionate student of technology</p>
         <ul id="socialLinks">
           <li class="youtube">
             <a href="https://youtube.com" target="_blank">
@@ -57,26 +58,8 @@
         </ul>
       </div>
     </main>
-    <script>
-      // Script de Javascript adicionado para alterar os links das redes sociais
-
-      // O objeto userSocialMedias recebe os nomes para as redes sociais do usuário. Aquelas que o usuário não tem estão vazias
-      const userSocialMedias = {
-        github: 'Jessica-Niide',
-        youtube: '',
-        facebook: 'jessica.niide',
-        instagram: 'jessicaniide',
-        twitter: ''
-      }
-
-      function changeSocialMediaLinks() {
-        for (let li of socialLinks.children) {
-          const socialMedia = li.getAttribute('class')
-          li.children[0].href = `https://${socialMedia}.com/${userSocialMedias[socialMedia]}`
-        }
-        github.href = `https://github.com/${userSocialMedias.github}`
-      }
-      changeSocialMediaLinks()
-    </script>
+    <!-- Retiramos do arquivo index.html o script do Javascript. Assim, temos estrutura (html), estilo (css) e funções (js) separados.
+    Pelo tag script fazemos a conexão entre os arquivos -->
+    <script src="main.js"></script>
   </body>
 </html>
