@@ -356,3 +356,29 @@ nome-da-função(parâmetros);
 </details>
 
 </details>
+
+---
+
+<details>
+<summary>Aula 4</summary>
+
+### Colocando o crachá na internet
+
+Acesse o crachá construído nesse projeto em: https://jessica-niide.github.io/nlw_heat/
+
+<details>
+<summary>API</summary>
+
+Uma API é uma interface de comunicação entre sites ou aplicativos. Por meio delas é possível buscar conteúdo de sites ou funcionalidades, e utilizar na sua própria aplicação. Neste projeto, utilizamos a api do github para buscar informações sobre o usuário que serão exibidas no crachá.
+</details>
+
+<details>
+<summary>JSON</summary>
+
+JSON (JavaScript Object Notation) é basicamente uma forma de escrever dados usado para transferir informações de um lugar para outro.
+
+O JSON se parece com um objeto do Javascript. Os dados vem apresentados entre chaves, e eles são escritos da forma `"propriedade": valor`. O nome da propriedade deve vir entre aspas, por exemplo `"id"`, e o seu valor pode ser qualquer tipo de dado do Javascript (string, number, objeto, etc).
+
+</details>
+
+</details>
