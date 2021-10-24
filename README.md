@@ -6,7 +6,7 @@ Projeto finalizado da **[NLW Heat da Rocketseat](https://nextlevelweek.com/inscr
 
 Confira o resultado final em: https://jessica-niide.github.io/nlw_heat/
 
-![Imagem do crachá no figma](https://github.com/Jessica-Niide/nlw_heat/blob/master/extras/figma_example.png?raw=true)
+![Imagem do crachá de_Jessica_Niide](https://github.com/Jessica-Niide/nlw_heat/blob/master/extras/cracha_JN.png?raw=true)
 
 <details>
 <summary>Aula 1</summary>
