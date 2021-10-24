@@ -12,13 +12,14 @@ body {
 
 body {
   display: grid;
-  place-items: center;
+  place-items: start center;
 }
 
 main {
-  background: url(images/background.svg);
-  width: 375px;
-  height: 812px;
+  background: url(images/background.svg) no-repeat center/cover;
+  width: 100vw;
+  min-height: 812px;
+  height: 100vh;
 }
 
 .content {
@@ -69,4 +70,70 @@ ul {
   display: flex;
   gap: 0.5rem;
   justify-content: center;
+}
+
+/* Regras de estilo que serão lidas apenas quando a tela tiver no mínimo 720px */
+
+@media (min-width: 720px) {
+  /* Adidionando cor ao body */
+  body {
+    background: linear-gradient(
+      to bottom,
+      #b50567,
+      #cb2356,
+      #d94245,
+      #e06035,
+      #df7d25,
+      #d07728,
+      #c1712a,
+      #b36b2c,
+      #8d492f,
+      #612f2a,
+      #331b1d,
+      #000000
+    );
+  }
+  /* O main da versão desktop tem tamanho fixo e menor do que o da versão mobile. Foram redefinidos o min-height, o height, a width e adicionada uma margem no topo para encaixar a alça. Ainda para encaixar a alça, o main recebe position: relative. Sombra adicionada para destacar o crachá. */
+  main {
+    min-height: 540px;
+    height: 540px;
+    width: 358px;
+    margin-top: 60px;
+    position: relative;
+    -webkit-box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, 0.35);
+    box-shadow: 3px 3px 10px 5px rgba(0, 0, 0, 0.35);
+  }
+
+  /* Uma forma de adicionar a alça na imagem é utilizando ::before e ::after. Selecionando o elemento que corresponde ao crachá (content), usamos a seleção content::before e content::after para adicionar conteúdo à página antes e depois do content sem alterar o html. */
+  /* Antes do elemento (crachá), foi adicionada a abertura preta onde se fixaria a alça do crachá. */
+  .content::before {
+    content: '';
+    background: black;
+    width: 80px;
+    height: 8px;
+    position: absolute;
+    margin-left: -38px;
+    top: 30px;
+  }
+
+  /* Após o elemento, temos outro conteúdo vazio para a alça colorida. */
+  .content::after {
+    content: '';
+    background: linear-gradient(hsl(327, 80%, 50%), hsl(47, 50%, 70%));
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    width: 64px;
+    height: 92px;
+    position: absolute;
+    top: -60px;
+    margin-left: -31px;
+  }
+
+  /* Arrumando a posição da foto pessoal e espaçamentos para as informações do crachá caberem no novo formato */
+  .avatar {
+    margin: 4.5rem auto 0;
+  }
+  ul {
+    margin-top: 2rem;
+  }
 }
