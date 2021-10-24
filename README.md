@@ -2,7 +2,9 @@
 
 ### Trilha Origin - Crachá DoWhile
 
-Projeto em desenvolvimento da **[NLW Heat da Rocketseat](https://nextlevelweek.com/inscricao/7)**: vamos desenvolver um crachá/cartão virtual de eventos que será utilizado no **[DoWhile](https://dowhile.io/convite/jessica-niide)**
+Projeto finalizado da **[NLW Heat da Rocketseat](https://nextlevelweek.com/inscricao/7)**: desenvolvemos um crachá/cartão virtual de eventos personalizado para o **[DoWhile](https://dowhile.io/convite/jessica-niide)**
+
+Confira o resultado final em: https://jessica-niide.github.io/nlw_heat/
 
 ![Imagem do crachá no figma](https://github.com/Jessica-Niide/nlw_heat/blob/master/extras/figma_example.png?raw=true)
 
@@ -364,8 +366,6 @@ nome-da-função(parâmetros);
 
 ### Colocando o crachá na internet
 
-Acesse o crachá construído nesse projeto em: https://jessica-niide.github.io/nlw_heat/
-
 <details>
 <summary>API</summary>
 
@@ -382,3 +382,86 @@ O JSON se parece com um objeto do Javascript. Os dados vem apresentados entre ch
 </details>
 
 </details>
+
+---
+
+<details>
+<summary>Aula 5</summary>
+
+### Finalizando o crachá: acertando a versão mobile e web
+
+<details>
+<summary>Complementando o HTML</summary>
+
+Quando construímos a estrutura html da nossa página, temos algumas tags especiais. Já vimos algumas delas:
+
+- doctype: essa informação é obrigatória e a primeira coisa que colocamos no arquivo. É ela que avisa para o navegador qual a versão do html usada.
+- html: a tag html é a primeira a aparecer (depois do doctype) e a última a se fechar no documento. Todos os outros elementos do html serão colocados dentro dela. Ela recebe um atributo importante que adicionamos nesta aula, o atributo lang, que indica o idioma da página.
+- head: dentro dessa tag agrupamos informações sobre a página. Alguns exemplos dessas informações que já colocamos no projeto são o título da página e os links para o css e as fontes. Dentro da head vão também as tags meta, que já explico.
+- body: o body é a tag que irá indicar onde está o conteúdo da página que ficará visível no navegador. Colocamos o body depois da head.
+
+Agora temos as tags meta para discutir. Elas são colocadas no head do arquivo, e servem para passar ao navegador informações sobre caracteres, palavras-chave, descrições de conteúdo e o ajuste do tamanho da página.
+
+Vamos adicionar duas tags meta ao arquivo.
+
+- `<meta charset="UTF-8" />`: charset tem a ver com a codificação dos caracteres, e o padrão "UTF-8" é o mais usado na web. Assim, garantimos que quase qualquer caractere será exibido corretamente.
+- `<meta name="viewport" content="width=device-width, initial-scale=1.0" />`: o viewport se refere à área visível da tela do dispositivo onde a página será aberta, passando para o navegador informações sobre como dimensionar a página. Aqui, deixamos o conteúdo da página com a largura do dispositivo, e o zoom da página quando ela for carregada como 1.0, ou seja, o tamanho renderizado será o mesmo descrito no arquivo.
+    
+</details>
+
+<br>
+
+<details>
+<summary>Ajuste para mobile e responsividade</summary>
+
+A visualização da nossa página deve se adequar ao dispositivo que abrir o crachá. Nos concentramos primeiro na visualização para uma tela de celular, depois iremos adicionar o estilo para telas maiores.
+
+- Acertando o projeto para celulares
+    
+    Até agora, os tamanhos do crachá, das imagens e dos textos estavam fixos. Não precisamos mexer nas imagens e no textos, mas vamos alterar o fundo para que ele ocupe a tela do celular inteira.
+    
+    Ao invés de pixels, vamos utilizar a viewport como unidade de medida. Além disso, vamos centralizar a imagem de fundo. Assim, temos:
+    
+```css
+    main {
+      background: url(images/background.svg) no-repeat center/cover;
+      width: 100vw;
+      min-height: 812px;
+      height: 100vh;
+    }
+```
+    
+
+A opção no-repeat faz sentido para telas grandes, e garante que a imagem de fundo não se repita. E a opção cover faz a imagem se ajustar para cobrir toda a tela.
+    
+- Criando o layout para tablets e desktops
+    
+    No figma já existe o layout da página para desktops, vou utilizar o mesmo desenho para tablets por simplicidade.
+    
+    Quando a página for aberta em um computador, a imagem de fundo irá se estender para ocupar toda a tela. Quando queremos desenvolver estilos diferentes para telas de tamanhos diferentes, usamos as regras de css `@media`, as medias queries. Com ela é possível selecionar estilos diferentes para dispositivos diferentes. Temos o exemplo a seguir:
+    
+```css
+main {
+    backgound-color: black;
+}
+
+@media (min-width: 720px) {
+    main {
+        backgound-color: green;
+    }
+}
+```
+
+
+O que esse arquivo faz é definir um cor de fundo inicial para a página como preto. Mas se a tela onde a página for exibida possuir a largura mínima de 720px, o css irá ler as regras especificadas dentro da regra `@media`. Lembrando que o css funciona como cascata, a cor de fundo da página será verde.
+    
+Para a nossa aplicação, vemos que para o desktop, temos uma imagem de fundo diferente, e o crachá é composto por uma alça além do crachá com as informações, que é menor do que na versão mobile. Todas essas mudanças serão colocadas dentro da regra `@media (min-width: 720px)`.
+    
+
+Esse é um assunto muito rico e extenso, para explicações mais completas sobre responsividade, unidades responsivas, medias queries e como implementar, confira a Masterclass Responsividade na Prática no Youtube da Rocketseat [https://www.youtube.com/watch?v=H91DhKPjhPk](https://www.youtube.com/watch?v=H91DhKPjhPk)
+
+</details>
+
+</details>
+
+
