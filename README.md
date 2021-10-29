@@ -4,7 +4,6 @@
 
 Projeto finalizado da **[NLW Heat da Rocketseat](https://nextlevelweek.com/inscricao/7)**: desenvolvemos um crachá/cartão virtual de eventos personalizado para o **[DoWhile](https://dowhile.io/convite/jessica-niide)**
 
-Confira o resultado final em: https://jessica-niide.github.io/nlw_heat/
 
 ![Imagem do crachá de_Jessica_Niide](https://github.com/Jessica-Niide/nlw_heat/blob/master/extras/cracha_JN.png?raw=true)
 
