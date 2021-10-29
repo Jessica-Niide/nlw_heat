@@ -32,12 +32,10 @@ getGithubProfileInfos()
 const cardContent = document.querySelector('.content')
 
 function getFunInfos() {
-  const xkcd = `https://www.boredapi.com/api/activity/`
-  fetch(xkcd)
+  const jokesApi = 'https://geek-jokes.sameerkumar.website/api?format=json'
+  fetch(jokesApi)
     .then(response => response.json())
-    .then(data => {
-      funUserBio.textContent = data.activity
-    })
+    .then(data => (funUserBio.textContent = data.joke))
 }
 
 getFunInfos()
