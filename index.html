@@ -4,7 +4,7 @@
     <!-- Meta tags: ajustes de documentos -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="icon" href="./images/build.svg" type="image/x-icon" />
     <title>Jessica Niide - DoWhile 2021</title>
 
     <!-- As tags link fazem a conexão entre arquivos.
@@ -19,47 +19,123 @@
   </head>
   <body>
     <!-- A tag main é semântica, dentro dela deverá vir o conteúdo principal da página. -->
-    <main>
+    <main id="background" class="container">
       <!-- A div não é semântica, ela não tem nenhuma característica que defina o que está dentro dela. Ela é apenas uma caixa que agrupa um conjunto de elementos. Apenas quando não temos uma tag semântica que se encaixe, usamos a tag div. -->
       <div class="content">
-        <div class="avatar">
-          <span>
-            <img src="images/build.svg" alt="Selo Rocketseat" />
-          </span>
-          <img
-            id="userPhoto"
-            src="images/jessicaniide.jpg"
-            alt="Foto pessoal de Jessica Niide"
-          />
+        <div class="card">
+          <div class="avatar">
+            <span>
+              <img src="images/build.svg" alt="Selo Rocketseat" />
+            </span>
+            <img
+              id="userPhoto"
+              src="images/jessicaniide.jpg"
+              alt="Foto pessoal de Jessica Niide"
+            />
+          </div>
+
+          <h1 id="userName">Jessica Niide</h1>
+          <a id="userGithub" href="https://github.com/">
+            <img src="images/github.svg" alt="Logo do GitHub" />
+            <span id="userLogin"> Jessica-Niide </span>
+          </a>
+          <p id="userBio">A passionate student of technology</p>
+          <ul id="socialLinks">
+            <li class="youtube">
+              <a href="https://youtube.com" target="_blank">
+                <img src="images/youtube.svg" alt="Ícone de YouTube"
+              /></a>
+            </li>
+            <li class="facebook">
+              <a href="https://facebook.com/" target="_blank">
+                <img src="images/facebook.svg" alt="Ícone de Facebook"
+              /></a>
+            </li>
+            <li class="instagram">
+              <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram.svg" alt="Ícone de Instagram"
+              /></a>
+            </li>
+            <li class="twitter">
+              <a href="https://twitter.com" target="_blank">
+                <img src="images/twitter.svg" alt="Ícone de Twitter"
+              /></a>
+            </li>
+          </ul>
+          <footer>
+            <button id="flipBack">
+              <img src="./images/flip.png" alt="Virar" />
+            </button>
+          </footer>
         </div>
-        <h1 id="userName">Jessica Niide</h1>
-        <a id="userGithub" href="https://github.com/">
-          <img src="images/github.svg" alt="Logo do GitHub" />
-          <span id="userLogin"> Jessica-Niide </span>
-        </a>
-        <p id="userBio">A passionate student of technology</p>
-        <ul id="socialLinks">
-          <li class="youtube">
-            <a href="https://youtube.com" target="_blank">
-              <img src="images/youtube.svg" alt="Ícone de YouTube"
-            /></a>
-          </li>
-          <li class="facebook">
-            <a href="https://facebook.com/" target="_blank">
-              <img src="images/facebook.svg" alt="Ícone de Facebook"
-            /></a>
-          </li>
-          <li class="instagram">
-            <a href="https://instagram.com" target="_blank">
-              <img src="images/instagram.svg" alt="Ícone de Instagram"
-            /></a>
-          </li>
-          <li class="twitter">
-            <a href="https://twitter.com" target="_blank">
-              <img src="images/twitter.svg" alt="Ícone de Twitter"
-            /></a>
-          </li>
-        </ul>
+        <div class="card cardBack">
+          <div class="avatar">
+            <span>
+              <img src="images/build.svg" alt="Selo Rocketseat" />
+            </span>
+            <img
+              id="funUserPhoto"
+              src="images/jessicaniide.jpg"
+              alt="Foto pessoal de Jessica Niide"
+            />
+          </div>
+
+          <h1 id="funUserName">Jessica Niide</h1>
+          <a id="funUserGithub" href="https://github.com/">
+            <img src="images/github.svg" alt="Logo do GitHub" />
+            <span id="funUserLogin"> Jessica-Niide </span>
+          </a>
+
+          <div id="funInfos">
+            <p id="funUserBio">A passionate student of technology</p>
+            <ul id="funSocialLinks">
+              <li class="youtube">
+                <a
+                  href="https://www.umsabadoqualquer.com/category/caes-e-gatos/"
+                  target="_blank"
+                >
+                  <img
+                    src="images/paw.png"
+                    alt="Ícone com uma patinha"
+                    title="Dog lover"
+                /></a>
+              </li>
+              <li class="facebook">
+                <a
+                  href="https://www.cervejariacolorado.com.br/"
+                  target="_blank"
+                >
+                  <img
+                    src="images/drink.png"
+                    alt="Ícone com uma cerveja"
+                    title="Drink with responsibility"
+                /></a>
+              </li>
+              <li class="instagram">
+                <a href="https://lnb.com.br/" target="_blank">
+                  <img
+                    src="images/basket.png"
+                    alt="Ícone com uma bola de basquete"
+                    title="Sports fanatic"
+                /></a>
+              </li>
+              <li class="twitter">
+                <a href="https://nathanwpyle.threadless.com/" target="_blank">
+                  <img
+                    src="images/book.png"
+                    alt="Ícone de livro"
+                    title="Creatures and narratives"
+                /></a>
+              </li>
+            </ul>
+          </div>
+
+          <footer>
+            <button id="flipFront">
+              <img src="./images/flip.png" alt="Virar" />
+            </button>
+          </footer>
+        </div>
       </div>
     </main>
     <!-- Retiramos do arquivo index.html o script do Javascript. Assim, temos estrutura (html), estilo (css) e funções (js) separados.

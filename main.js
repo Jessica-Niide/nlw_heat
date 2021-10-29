@@ -28,3 +28,23 @@ function getGithubProfileInfos() {
     })
 }
 getGithubProfileInfos()
+
+const cardContent = document.querySelector('.content')
+
+function getFunInfos() {
+  const xkcd = `https://www.boredapi.com/api/activity/`
+  fetch(xkcd)
+    .then(response => response.json())
+    .then(data => {
+      funUserBio.textContent = data.activity
+    })
+}
+
+getFunInfos()
+
+function flipCard() {
+  cardContent.classList.toggle('flipped')
+}
+
+flipBack.addEventListener('click', flipCard)
+flipFront.addEventListener('click', flipCard)
